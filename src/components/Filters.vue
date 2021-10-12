@@ -123,6 +123,7 @@
 <style scoped>
   header {
     position: sticky;
+    z-index: 2;
     top: 85px;
     box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
     padding: 20px calc((100vw - 1020px) / 2);

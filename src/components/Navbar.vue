@@ -8,6 +8,7 @@
   nav {
     position: sticky;
     display: flex;
+    z-index: 2;
     top: 0;
     height: 45px;
     padding: 20px;

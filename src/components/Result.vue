@@ -4,6 +4,7 @@
       <span class="description">
         {{ result.description }}
       </span>
+      <div class="badge" :class="{'success' : result.isActive, 'error' : result.isActive == false}">Active: {{ result.isActive != undefined ? result.isActive : 'NULL' }}</div>
     </div>
     <div class="body">
       <div class="provider">
@@ -47,8 +48,30 @@
 }
 
 .result .header {
+  position: relative;
+  z-index: 1;
   background-color: var(--grey6);
   padding: 10px 20px;
+}
+
+.result .header .badge{
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--grey2);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.result .header .badge.success{
+  background-color: var(--green1);
+}
+
+.result .header .badge.error{
+  background-color: var(--red1);
 }
 
 .result .body  {

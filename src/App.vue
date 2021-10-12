@@ -55,7 +55,7 @@ export default {
   methods: {
     async getResults() {
       this.results = []
-      let request = '?isActive=true'
+      let request = '?'
 
       if(this.filter.provider) {
         request += "&providerId=" + this.filter.provider
@@ -90,6 +90,7 @@ export default {
               monthlyPrice: el.monthlyPrice,
               description: el.description,
               internetSpeed: el.internetSpeed,
+              isActive: el.isActive,
               provider: this.providers.filter(it => {
                 return it.id == el.providerId
               })[0].name,
